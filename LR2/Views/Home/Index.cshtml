@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Перелік Страхових Посуг</h2>
+    @foreach (var b in ViewBag.Strahovs)
+    {
+<ul>
+    <li> <img style="width:200px;height200px;" src="@b.Path" /></li>
+    <li><p>@b.Name</p></li>
+    <li><p>@b.Type</p></li>
+    <li><p>@b.Price</p></li>
+    <li><a href="/Home/More/@b.Id">Деталі</a></li>
+</ul>
+<br />
+    }
